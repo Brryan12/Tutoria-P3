@@ -1,6 +1,6 @@
 package org.example.data;
 
-import org.example.logic.Paciente;
+import org.example.logic.Receta;
 
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.Marshaller;
@@ -9,24 +9,24 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
-public class GestorDatosPaciente {
-    private File archivo = new File("BasePracticaEnClaseXML/Datos/pacientes.xml");
+public class GestorDatosReceta {
+    private File archivo = new File("BasePracticaEnClaseXML/Datos/recetas.xml");
 
-    public void guardar(List<Paciente> lista) {
+    public void guardar(List<Receta> lista) {
         try {
-            JAXBContext ctx = JAXBContext.newInstance(ListaPacientes.class);
+            JAXBContext ctx = JAXBContext.newInstance(ListaRecetas.class);
             Marshaller m = ctx.createMarshaller();
             m.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
-            m.marshal(new ListaPacientes(lista), archivo);
+            m.marshal(new ListaRecetas(lista), archivo);
         } catch (Exception e) { e.printStackTrace(); }
     }
 
-    public List<Paciente> cargar() {
+    public List<Receta> cargar() {
         if (!archivo.exists()) return new ArrayList<>();
         try {
-            JAXBContext ctx = JAXBContext.newInstance(ListaPacientes.class);
+            JAXBContext ctx = JAXBContext.newInstance(ListaRecetas.class);
             Unmarshaller um = ctx.createUnmarshaller();
-            return ((ListaPacientes) um.unmarshal(archivo)).getPacientes();
+            return ((ListaRecetas) um.unmarshal(archivo)).getRecetas();
         } catch (Exception e) { return new ArrayList<>(); }
     }
 }

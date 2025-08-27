@@ -3,11 +3,21 @@ package org.example.logic;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
+
+@XmlRootElement(name="receta")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Receta {
     private String id;
     private String pacienteId;
+    @XmlJavaTypeAdapter(LocalDateAdapter.class)
     private LocalDate fecha;
+    @XmlElement(name = "detalles")
     private List<DetalleReceta> detalles = new ArrayList<>();
 
     public Receta() {}

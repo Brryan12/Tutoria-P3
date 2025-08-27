@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<listaRecetas>
+    <receta>
+        <id>R001</id>
+        <pacienteId>P001</pacienteId>
+        <fecha>2024-06-01</fecha>
+        <detalles>
+            <medicamentoCodigo>001</medicamentoCodigo>
+            <cantidad>2</cantidad>
+            <indicaciones>Tomar cada 8 horas</indicaciones>
+        </detalles>
+    </receta>
+    <receta>
+        <id>R002</id>
+        <pacienteId>P002</pacienteId>
+        <fecha>2024-06-02</fecha>
+        <detalles>
+            <medicamentoCodigo>002</medicamentoCodigo>
+            <cantidad>1</cantidad>
+            <indicaciones>Tomar después de comer</indicaciones>
+        </detalles>
+    </receta>
+</listaRecetas>
