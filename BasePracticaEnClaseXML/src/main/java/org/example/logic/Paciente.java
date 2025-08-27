@@ -1,10 +1,17 @@
 package org.example.logic;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import java.time.LocalDate;
+@XmlRootElement(name="paciente")
+@XmlAccessorType(XmlAccessType.FIELD)
 
 public class Paciente {
     private String id;
     private String nombre;
+    @XmlJavaTypeAdapter(LocalDateAdapter.class)
     private LocalDate fechaNacimiento;
     private String telefono;
 

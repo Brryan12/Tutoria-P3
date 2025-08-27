@@ -1,6 +1,7 @@
 package org.example;
 
 import org.example.data.GestorDatosMedicamento;
+import org.example.data.GestorDatosPaciente;
 import org.example.logic.DetalleReceta;
 import org.example.logic.Medicamento;
 import org.example.logic.Paciente;
@@ -32,18 +33,18 @@ public class Main {
         lista.add(new Medicamento("002", "Ibuprofeno", "Cápsula"));
 //
 //
-//        List<Paciente> lista2 = new ArrayList<>();
-//        lista2.add(new Paciente("P001", "Ana López", LocalDate.of(2004, 5, 12), "600123456"));
-//        lista2.add(new Paciente("P002", "Juan Pérez", LocalDate.of(1985, 8, 23), "600654321"));
+        List<Paciente> lista2 = new ArrayList<>();
+        lista2.add(new Paciente("P001", "Ana López", LocalDate.of(2004, 5, 12), "600123456"));
+        lista2.add(new Paciente("P002", "Juan Pérez", LocalDate.of(1985, 8, 23), "600654321"));
 //
 //
         GestorDatosMedicamento gestor = new GestorDatosMedicamento();
         gestor.guardar(lista);
         System.out.println("Medicamentos guardados en medicamentos.xml");
 //
-//        GestorDatosPaciente gestor2 = new GestorDatosPaciente();
-//        gestor2.guardar(lista2);
-//        System.out.println("Pacientes guardados en pacientes.xml");
+        GestorDatosPaciente gestor2 = new GestorDatosPaciente();
+        gestor2.guardar(lista2);
+        System.out.println("Pacientes guardados en pacientes.xml");
 //
 //        GestorDatosReceta gestor3 = new GestorDatosReceta();
 //        gestor3.guardar(recetas);
@@ -60,14 +61,14 @@ public class Main {
 
 //
 //
-//        List<Paciente> cargados2 = gestor2.cargar();
-//        System.out.println("Pacientes cargados:");
-//        for (Paciente p : cargados2) {
-//            System.out.println("ID: " + p.getId() +
-//                    ", Nombre: " + p.getNombre() +
-//                    ", Fecha Nacimiento: " + p.getFechaNacimiento() +
-//                    ", Teléfono: " + p.getTelefono());
-//        }
+        List<Paciente> cargados2 = gestor2.cargar();
+        System.out.println("Pacientes cargados:");
+        for (Paciente p : cargados2) {
+            System.out.println("ID: " + p.getId() +
+                    ", Nombre: " + p.getNombre() +
+                    ", Fecha Nacimiento: " + p.getFechaNacimiento() +
+                    ", Teléfono: " + p.getTelefono());
+        }
 //
 //        List<Receta> cargadas = gestor3.cargar();
 //        System.out.println("Recetas cargadas:");

@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class GestorDatosMedicamento {
-    private File archivo = new File("medicamentos.xml");
+    private File archivo = new File("Datos/medicamentos.xml");
 
     public void guardar(List<Medicamento> lista) {
         try {
