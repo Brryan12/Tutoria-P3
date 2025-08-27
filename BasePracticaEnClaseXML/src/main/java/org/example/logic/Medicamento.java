@@ -1,9 +1,12 @@
 package org.example.logic;
+
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlRootElement;
 
-@XmlRootElement(name = "Medicamentos")
+
+@XmlRootElement(name="medicamento")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Medicamento {
     private String codigo;
@@ -18,6 +21,9 @@ public class Medicamento {
         this.nombre = nombre;
         this.presentacion = presentacion;
     }
+
+    //agregar getters y setters con el generate
+
 
     public String getCodigo() {
         return codigo;
@@ -42,5 +48,4 @@ public class Medicamento {
     public void setPresentacion(String presentacion) {
         this.presentacion = presentacion;
     }
-//agregar getters y setters con el generate
 }

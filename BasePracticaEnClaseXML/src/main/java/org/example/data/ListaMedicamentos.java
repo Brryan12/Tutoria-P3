@@ -8,10 +8,12 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import java.util.List;
 
-@XmlAccessorType(XmlAccessType.FIELD) //acceder a los atributos privados
-@XmlRootElement(name = "listaMedicamento")
+
+@XmlRootElement(name="listaMedicamentos")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class ListaMedicamentos {
-    @XmlElement(name = "medicamento") //el nombre de los corchetes del xml + buscar
+
+    @XmlElement(name="medicamento")
     private List<Medicamento> medicamentos;
 
     public ListaMedicamentos() {}

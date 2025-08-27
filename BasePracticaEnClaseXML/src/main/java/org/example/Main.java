@@ -1,6 +1,6 @@
 package org.example;
 
-import org.example.data.GestorMedicamentos;
+import org.example.data.GestorDatosMedicamento;
 import org.example.logic.DetalleReceta;
 import org.example.logic.Medicamento;
 import org.example.logic.Paciente;
@@ -37,7 +37,7 @@ public class Main {
 //        lista2.add(new Paciente("P002", "Juan Pérez", LocalDate.of(1985, 8, 23), "600654321"));
 //
 //
-        GestorMedicamentos gestor = new GestorMedicamentos();
+        GestorDatosMedicamento gestor = new GestorDatosMedicamento();
         gestor.guardar(lista);
         System.out.println("Medicamentos guardados en medicamentos.xml");
 //
@@ -57,6 +57,7 @@ public class Main {
                     ", Nombre: " + m.getNombre() +
                     ", Presentación: " + m.getPresentacion());
         }
+
 //
 //
 //        List<Paciente> cargados2 = gestor2.cargar();
@@ -80,5 +81,6 @@ public class Main {
 //                        ", Indicaciones: " + d.getIndicaciones());
 //            }
 //        }
+
     }
 }
